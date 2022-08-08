@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 from task02 import func
 
@@ -5,7 +7,7 @@ from task02 import func
 print('****************  TASK 02 STARTED  *********************')
 
 lines = []
-with open("input/input.txt") as f:
+with open("tests/in/test.in") as f:
     lines = f.readlines()
 
 pereche = func(lines)
@@ -16,14 +18,14 @@ for i in range(len(pereche_list[2]) - 1):
 
 pereche = tuple(pereche_list)
     
-write_file = "output/out.txt"
+write_file = "tests/out/test.out"
 g = open(write_file, "w")
 g.write("Nume familie:\n" + str(pereche[0]) + "\n\n" + "Prenume_1:\n" +\
          str(pereche[1]) + "\n\n" + "Prenume_2:\n" + str(pereche[2]))
 g.close()
 
-out_file = "output/out.txt"
-ref_file = "ref/ref.txt"
+out_file = "tests/out/test.out"
+ref_file = "tests/ref/test.ref"
 
 out_content = open(out_file).readlines()
 ref_content = open(ref_file).readlines()

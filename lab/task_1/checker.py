@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 from task01 import func
 
@@ -6,7 +8,7 @@ print('****************  TASK 01 STARTED  *********************')
 
 all_files = []
 for index in range(1, 6):
-    file_name = "input/test_" + str(index) + ".txt"
+    file_name = "tests/in/test_" + str(index) + ".in"
     all_files.append(file_name)
 
 index = 1
@@ -23,7 +25,7 @@ for file in all_files:
     pereche = func(note, nume_materie)
     pereche_remastered = ("{:.2f}".format(pereche[0]), pereche[1])
         
-    write_file = "output/out_" + str(index) + ".txt"
+    write_file = "tests/out/test_" + str(index) + ".out"
     g = open(write_file, "w")
     g.write(str(pereche_remastered))
     g.close()
@@ -31,8 +33,8 @@ for file in all_files:
     index += 1
 
 for test_case in range(1, 6):
-    out_file = "output/out_" + str(test_case) + ".txt"
-    ref_file = "ref/ref_" + str(test_case) + ".txt"
+    out_file = "tests/out/test_" + str(test_case) + ".out"
+    ref_file = "tests/ref/test_" + str(test_case) + ".ref"
 
     out_content = open(out_file).readlines()
     ref_content = open(ref_file).readlines()

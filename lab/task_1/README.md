@@ -1,10 +1,34 @@
-$$TASK....01$$
+# **TASK 01**
 
-Pentru testare, puteți rula în terminal comanda `python3 checker.py` sau puteți rula script-ul direct din IDE.
+## <ins>Cerinta</ins>
 
-### **Cerinta**
-        Un profesor de la facultatea de Automatica si Calculatoare trebuie sa realizeze un program care sa calculeze media notelor din examen pentru unele materii.
+> Un profesor de la facultatea de Automatica si Calculatoare trebuie sa realizeze un program care sa calculeze media notelor din examen pentru unele materii.
 
-        Astfel, se da functia **func(note, nume_materie)**. Nu aveti de completat decat interiorul functiei, iar variabila **pereche** denota un tuplu, pe care trebuie sa il creati astfel incat sa contina un float (adica media notelor) si numele materiei.
+> Astfel, se da functia `func(note, nume_materie)`. Nu aveti de completat decat interiorul functiei, iar variabila `pereche` denota un tuplu, pe care trebuie sa il creati astfel incat sa contina un float (adica media notelor) si numele materiei.
 
-        Spre exemplu, se primesc notele 5, 9, 6, 7, sub forma unei liste si numele materiei PCLP. Tuplul **pereche** va arata astfel: (6.75, 'PCLP').
+## <ins>Exemplu</ins>
+
+```
+input:
+1 2 3 4 5 6 7 8 9 10
+SPORT
+
+output:
+('5.50', 'SPORT')
+```
+
+> Explicatie: Se calculeaza media notelor (1 + 2 +...+ 9 + 10), care este egala cu 5.5 si se concateneaza cu numele materiei ("SPORT") in cadrul tuplului `pereche`.
+
+## <ins>Rulare | Testare</ins>
+
+> Pentru testare, puteți rula script-ul direct din IDE sau puteți rula în terminal comanda:
+
+```
+./checker.py
+```
+
+> In cazul in care nu puteti rula acest script din cauza permisiunilor, folositi mai intai urmatoarea comanda:
+
+```
+sudo chmod 700 checker.py
+```
