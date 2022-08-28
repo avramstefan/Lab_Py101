@@ -1,35 +1,37 @@
 # Set Up
 
-We will use a virtual enviroment for this lab.
+Vom folosi un virtual environment pentru acest laborator.
 
-What is a virtual enviorement?
+Ce este un virtual environment?
 
-A virtual environment is a tool that helps to keep dependencies required by different projects separate by creating isolated python virtual environments for them. This is one of the most important tools that most of the Python developers use.
+Este o unealta care ne ajuta sa separam dependintele mai multor proiecte, creand medii virtuale pentru ele. 
 
-TLDR: with a virtual envioremet we download dependencies only for the project we are currently working with. We don't use the globally installed dependencies, and the dependencies that we install are not visible in other projects.
+Pe scurt, un virtual environment ne permite sa instalam dependinte numai pentru proiectul la care lucram.
+Dependintele globale nu sunt vizibile in proiectul curent si dependintele proiectului curent nu sunt vizibile pentru alte proiecte.
 
-Read more about virtual enviorements here: https://www.geeksforgeeks.org/python-virtual-environment/
+Mai multe informatii gasesti aici: https://www.geeksforgeeks.org/python-virtual-environment/
 
-For this project we need to have flask and it's dependencies installed.
+Pentru acest proiect avem nevoie sa instalam flask.
 
 ## Windows
-Oppen a comand line, and follow this steps:
+Deschide o linie de comanda si urmeaza pasii:
 
-### Create an environment
+### Creaza un virtual environment
 
 ```
 > mkdir myproject
 > cd myproject
-> py -3 -m venv venv
+> py -3 -m venv skel
 ```
 
-### Activate the environment
+### Activeaza mediul virtual
 
 ```
 > venv\Scripts\activate
 ```
 
-On windows scripts are disabled by default. If this command does not work enable scripts. 
+Configuratia de windows standard are scripturile blocate. Daca comanda asta nu merge inseamna ca trebuie sa-ti activezi
+executarea scripturilor. 
 
 https://superuser.com/questions/106360/how-to-enable-execution-of-powershell-scripts 
 
@@ -40,9 +42,9 @@ https://superuser.com/questions/106360/how-to-enable-execution-of-powershell-scr
 ```
 
 ## Linux/Mac OS
-Oppen a comand line, and follow this steps:
+Deschide o linie de comanda si urmeaza pasii:
 
-### Create an environment
+### Creaza un virtual environment
 
 ```
 $ mkdir myproject
@@ -50,7 +52,7 @@ $ cd myproject
 $ python3 -m venv venv
 ```
 
-### Activate the environment
+### Activeaza mediul virtual
 
 ```
 $ . venv/bin/activate
@@ -61,25 +63,27 @@ $ . venv/bin/activate
 ```
 $ pip install Flask
 ```
-You may also need to install request:
+S-ar putea sa ai nevoie si de request:
 
 ```
 pip install request
 ```
 # Task
 
-Use flask --app server run to start the server.
-Use python3 client.py to start the client.
+Foloseste comanda flask --app server run pentru a pornii server-ul.
+Foloseste python3 client.py pentru client.
 
-We are going to create a task management web application for a company that needs to organize its emploies.
+Vom crea o aplicatie de tipul task manager, pentru o companie care are nevoie sa-si organizeze angajatii.
 
-The manager of the project wants to have the following features.
+Aplicatia va avea:
 
-A server that stores information about the tasks.
+Un server care stocheaza informatii despre task-uri.
 
-A client witch will send request to the server to interogate and modify the database.
+Un client care v-a face cereri catre server pentru a interoga/modifica baza de date.
 
-You will have to implement the following request
+In cadrul acestui laborator baza de date este reprezentata de un dictionar.
+
+Va trebui sa implementati urmatoarele cereri:
 
 ## 1. Sanity
 Url: http://127.0.0.1:5000/sanity
@@ -204,7 +208,7 @@ Response:
 }
 ```
 
-Delete the task with the id: id from the databese.
+Sterge task-ul cu id-ul dat.
 
 ## 4.1. Delete All Tasks
 
@@ -225,7 +229,7 @@ Response:
 }
 ```
 
-Delete all tasks from the databese.
+Sterge toate task-urile din baza de date.
 
 ## 5. Update Task
 
@@ -246,7 +250,7 @@ Response:
 }
 ```
 
-Update the task status with the id: id to completed from not done.
+Updateaza statusul task-ul cu id-ul dat.
 
 ## 5.1 Update Task Assignee
 
@@ -267,7 +271,7 @@ Response:
 }
 ```
 
-Update the task name with the id: id.
+Updateaza numele persoanei din task-ul cu id-ul dat.
 
 ## 6. Save
 
@@ -288,7 +292,7 @@ Response:
 }
 ```
 
-The server will save the database in a file.
+Serverul va salva.
 
 ## 7. Load
 
@@ -309,8 +313,8 @@ Response:
 }
 ```
 
-The server will load the database from a file.
+Serverul va incarca baza de date dintr-un fisier json.
 
 ## 8. Bonus
 
-Use Postman to test the server.
+Testeaza serverul folosind Postman
