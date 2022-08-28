@@ -79,7 +79,7 @@ Aplicatia va avea:
 
 Un server care stocheaza informatii despre task-uri.
 
-Un client care v-a face cereri catre server pentru a interoga/modifica baza de date.
+Un client care va face cereri catre server pentru a interoga/modifica baza de date.
 
 In cadrul acestui laborator baza de date este reprezentata de un dictionar.
 
