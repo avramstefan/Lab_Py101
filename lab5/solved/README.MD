@@ -68,6 +68,9 @@ pip install request
 ```
 # Task
 
+Use flask --app server run to start the server.
+Use python3 client.py to start the client.
+
 We are going to create a task management web application for a company that needs to organize its emploies.
 
 The manager of the project wants to have the following features.
@@ -152,7 +155,7 @@ Response: Json containing all tasks of the employee with the name: "name" stored
 
 ## 3.2. Print Pending Tasks
 
-Url: http://127.0.0.1:5000/print/name
+Url: http://127.0.0.1:5000/print/pending
 
 Type: Get
 
@@ -166,9 +169,9 @@ Body:
 Response: Json containing all tasks with status not done.
 ```
 
-## 3.2. Print Completed Tasks
+## 3.3. Print Completed Tasks
 
-Url: http://127.0.0.1:5000/print/name
+Url: http://127.0.0.1:5000/print/completed
 
 Type: Get
 
@@ -247,7 +250,7 @@ Update the task status with the id: id to completed from not done.
 
 ## 5.1 Update Task Assignee
 
-Url: http://127.0.0.1:5000/update/id
+Url: http://127.0.0.1:5000/update/id/name
 
 Type: Post
 

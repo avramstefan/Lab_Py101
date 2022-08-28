@@ -3,3 +3,4 @@ Include
 Lib
 Scripts
 pyvenv.cfg
+database.json
