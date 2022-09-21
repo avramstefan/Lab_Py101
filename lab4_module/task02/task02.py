@@ -5,8 +5,8 @@ class Image():
         self.columns = columns
         self.max_value = max_value
         self.pixels = pixels
-    def to_string(self):
-        #use this for debugging
+    def __str__(self):
+        # use this for debugging
         image = ""
         image += f"{self.format}{self.rows} {self.columns}\n{self.max_value}\n"
         for i in range(self.rows):
@@ -15,11 +15,11 @@ class Image():
             image += "\n"
         return image
     def sepia(self):
-        #apply sepia filter to the image
+        # apply sepia filter to the image
         pass
     def read(self, filename):
-        #read from file and assign the correct parameters (see README and input examples)
+        # read from file and assign the correct parameters (see README and input examples)
         pass
     def write(self, filename):
-        #write to file in the correct format (see README and input examples)
+        # write to file in the correct format (see README and input examples)
         pass

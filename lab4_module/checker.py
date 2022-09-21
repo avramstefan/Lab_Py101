@@ -21,7 +21,7 @@ def check_task1():
         x = float(numbers[1])
         y = float(numbers[2])
 
-        [x_res, y_res] = t1.random_points(radius, x, y)
+        x_res, y_res = t1.random_points(radius, x, y)
 
         if ((x_res - x) ** 2 + (y_res - y) ** 2) <= radius ** 2:
             print("TEST " + f"{i}" + ".............................. PASSED")
@@ -83,9 +83,6 @@ def check_task_2_2():
         output.close()
         ref_output.close()
         i += 1
-
-
-
 
 if len(sys.argv) == 1:
     check_task1()
