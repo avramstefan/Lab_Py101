@@ -1,8 +1,9 @@
 def task(*args):
     '''
-    numere -> elemente de mai multe tipuri
-    return -> lista
+    args -> elemente de mai multe tipuri
+    return -> lista cu elementele corespunzatoare
     '''
+
     result = []
 
     ################### TO DO #########################

@@ -1,15 +1,17 @@
-def task1c(cuvinte):
+def task1c(words):
     '''
-    numere -> lista string-uri
+    words -> lista string-uri
     return -> lista string-uri
 
     Salvati cuvintele care sunt palindrom in "palindromes"
     '''
+
+    palindromes = []
 
     ################### TO DO #########################
     
 
     ###################################################
 
-    # Nu modificati return-ul
+    # Nu modificati valoarea de retur a functiei
     return list(palindromes)

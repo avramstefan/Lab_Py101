@@ -1,8 +1,9 @@
 def task(*args):
     '''
-    numere -> elemente de mai multe tipuri
+    numere -> elemente de tipuri diferite
     return -> lista
     '''
+
     result = []
 
     for elem in args:

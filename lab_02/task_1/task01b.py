@@ -1,16 +1,18 @@
-def task1b(fraza):
+def task1b(phrase):
     '''
-    numere -> string
+    phrase -> string
     return -> string
 
     Transformati in litere mari vocalele din fraza
-    si salvati rezultatul in "noua_fraza"
+    si salvati rezultatul in "new_phrase"
     '''
+
+    new_phrase = ""
 
     ################### TO DO #########################
     
 
     ###################################################
 
-    # Nu modificati return-ul
-    return ''.join(list(noua_fraza))
+    # Nu modificati valoarea de retur a functiei
+    return ''.join(list(new_phrase))

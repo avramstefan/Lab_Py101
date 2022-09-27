@@ -3,9 +3,9 @@ def bursa(item):
         return True
     return False
 
-def task(catalog):
-    # students = list(filter(bursa, catalog.items()))
-    students = list(filter(lambda x: (sum(x[1]) / len(x[1])) >= 8.5, catalog.items()))
+def task(register):
+    # students = list(filter(bursa, register.items()))
+    students = list(filter(lambda x: (sum(x[1]) / len(x[1])) >= 8.5, register.items()))
 
     result = []
 

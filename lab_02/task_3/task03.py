@@ -1,13 +1,13 @@
-def task(catalog):
+def task(register):
     '''
-    catalog -> dictionar
+    register -> dictionar
     return -> lista doar cu numele studentilor
     '''
-    nume = []
+    names = []
 
     ################### TO DO #########################
     
 
     ###################################################
     
-    return nume
+    return names

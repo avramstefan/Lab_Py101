@@ -4,7 +4,7 @@
 
 > Pentru acest task o sa facem un joc de imaginatie: sunteti interni la secretariatul din poli si doriti sa extrageti din catalog numele tuturor studentilor care au media anuala mai mare sau egala cu 8.50 pentru a le acorda burse.
 
-> Catalogul este sub forma unui dictionar, in care cheia este numele studentului, iar valoarea este o lista de note. Calculati media pentru fiecare student si returnati o lista cu numele celor care se incadreaza pentru bursa.
+> Catalogul este sub forma unui dictionar, in care cheia este numele studentului, iar valoarea este o lista de note. Calculati media pentru fiecare student si returnati o **lista** cu numele celor care se incadreaza pentru bursa.
 
 ## <ins>Exemplu</ins>
 
@@ -34,5 +34,5 @@ output:
 > In cazul in care nu puteti rula acest script din cauza permisiunilor, folositi mai intai urmatoarea comanda:
 
 ```
-sudo chmod 700 checker.py
+sudo chmod 644 checker.py
 ```
