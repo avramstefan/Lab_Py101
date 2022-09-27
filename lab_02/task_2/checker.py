@@ -4,6 +4,12 @@ from solved import task
 # Task 02
 print('****************  TASK 02 STARTED  *********************')
 
+try:
+    os.mkdir("tests/out/")
+except:
+    shutil.rmtree("tests/out/")
+    os.mkdir("tests/out/")
+
 all_files = []
 for index in range(1, 6):
     file_name = "tests/in/test_" + str(index) + ".in"
