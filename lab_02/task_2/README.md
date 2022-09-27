@@ -6,11 +6,13 @@
 * sa fie numere **intregi**
 * sa fie consoane mici
 
+> ATENTIE: cuvintele si frazele **nu** sunt luate in considerare
+
 ## <ins>Exemplu</ins>
 
 ```
 input:
-50 'A' 8.2 'c' '_' 3 'n' True 'Z' [1,2] 't'
+50 'A' 8.2 'c' '_' 3 'n' True 'Z' [1,2] 't' "meow"
 
 output:
 50 'c' 3 'n' 't'

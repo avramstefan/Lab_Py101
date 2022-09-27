@@ -9,12 +9,12 @@ def task(*args):
     for elem in args:
         if type(elem) is int:
             result.append(elem)
-        elif type(elem) == str:
+        elif type(elem) == str and len(elem) == 1:
             if elem not in "aeiou" and elem.islower():
-                result.append(elem)    
+                result.append(elem)
         else:
             continue
     
     return result
 
-print(task(50, 'A', 8.2, 'c', '_', 3, 'n', True, 'Z', 't', [1,2]))
+# print(task(50, 'A', 8.2, 'c', '_', 3, 'n', True, 'Z', 't', [1,2], "meow"))
