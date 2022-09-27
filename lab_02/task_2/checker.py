@@ -1,4 +1,5 @@
 import os
+import shutil
 from solved import task
 
 # Task 02
@@ -49,3 +50,4 @@ if solved:
     print('**************** TASK 02 COMPLETED *********************')
 else:
     print('******************* FAILED TESTS ***********************')
+
