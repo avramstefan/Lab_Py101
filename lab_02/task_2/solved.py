@@ -1,6 +1,6 @@
 def task(*args):
     '''
-    numere -> elemente de tipuri diferite
+    args -> elemente de tipuri diferite
     return -> lista
     '''
 
