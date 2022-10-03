@@ -15,5 +15,3 @@ class Refrigerator(product.Product):
                       specifice frigiderului (nume, energy label)
                     
         """
-    
-        return "Enjoy fresh food with {}, energy label {}.".format(self.name, self.energy_label)
