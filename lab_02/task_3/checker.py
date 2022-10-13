@@ -1,9 +1,10 @@
+import ast
 import os
 import shutil
-from task02 import task
+from task03 import task
 
-# Task 02
-print('****************  TASK 02 STARTED  *********************')
+# Task 03
+print('****************  TASK 03 STARTED  *********************')
 
 try:
     os.mkdir("tests/out/")
@@ -21,9 +22,9 @@ for file in all_files:
     with open(file) as f:
         lines = f.read()
     
-    # convert to tuple
-    elements = eval(lines)
-    result = task(*elements)
+    # convert to dictionary
+    reg = ast.literal_eval(lines)
+    result = task(reg)
     
     write_file = "tests/out/test_" + str(index) + ".out"
     g = open(write_file, "w+")
@@ -47,7 +48,7 @@ for test_case in range(1, 6):
         print("TEST " + str(test_case) + " .............................. FAILED")
 
 if solved:
-    print('**************** TASK 02 COMPLETED *********************')
+    print('**************** TASK 03 COMPLETED *********************')
 else:
     print('******************* FAILED TESTS ***********************')
 
