@@ -1,9 +1,11 @@
 import requests
 
+url = "http://127.0.0.1:5000/"
+
 while True:
     command = input()
     if command == "Sanity check":
-        x = requests.get("http://127.0.0.1:5000/sanity")
+        x = requests.get(f"{url}sanity")
         print(x.status_code)
     elif command == "Add":
         pass
