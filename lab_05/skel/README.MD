@@ -33,7 +33,7 @@ executarea scripturilor.
 
 https://superuser.com/questions/106360/how-to-enable-execution-of-powershell-scripts 
 
-### Install Flask si Request
+### Install Flask
 
 ```
 > pip install Flask 
