@@ -12,7 +12,7 @@ class Task:
         status: are valoarea not done sau completed
         type: string
     """
-    def __init__(self, id, name, description, status) -> None:
+    def __init__(self, id, name, description, priority, status):
         self.id = id
         self.name = name
         self.description = description

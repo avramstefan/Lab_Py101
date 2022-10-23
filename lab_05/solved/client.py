@@ -7,7 +7,7 @@ while True:
         x = requests.get("http://127.0.0.1:5000/sanity")
         print(x.status_code)
     elif command == "Add":
-        task = Task(input('id='), input('name='), input('description='), input('priority='), "not done")
+        task = Task(input('id='), input('name='), input('description='), "not done")
         print(task.toJson())
         requests.post("http://127.0.0.1:5000/add", json=task.toJson())
     elif command == "Print":

@@ -1,10 +1,10 @@
-# Set Up
+# SetUp
 
 Vom folosi un virtual environment pentru acest laborator.
 
 Ce este un virtual environment?
 
-Este o unealta care ne ajuta sa separam dependintele mai multor proiecte, creand medii virtuale pentru ele. 
+Este o unealta care ne ajuta sa separam dependentele mai multor proiecte, creand medii virtuale pentru ele. 
 
 Pe scurt, un virtual environment ne permite sa instalam dependinte numai pentru proiectul la care lucram.
 Dependintele globale nu sunt vizibile in proiectul curent si dependintele proiectului curent nu sunt vizibile pentru alte proiecte.
@@ -14,7 +14,7 @@ Mai multe informatii gasesti aici: https://www.geeksforgeeks.org/python-virtual-
 Pentru acest proiect avem nevoie sa instalam flask.
 
 ## Windows
-Deschide o linie de comanda si urmeaza pasii:
+Deschide un terminal si urmeaza pasii:
 
 ### Creaza un virtual environment
 
@@ -35,14 +35,14 @@ executarea scripturilor.
 
 https://superuser.com/questions/106360/how-to-enable-execution-of-powershell-scripts 
 
-### Install Flask
+### Install Flask si Request
 
 ```
-> pip install Flask
+> pip install Flask request
 ```
 
 ## Linux/Mac OS
-Deschide o linie de comanda si urmeaza pasii:
+Deschide un terminal si urmeaza pasii:
 
 ### Creaza un virtual environment
 
@@ -81,7 +81,11 @@ Un server care stocheaza informatii despre task-uri.
 
 Un client care va face cereri catre server pentru a interoga/modifica baza de date.
 
-In cadrul acestui laborator baza de date este reprezentata de un dictionar.
+Va punem la dispozitie clasa Task de care ne vom folosi in cadrul acestui laborator pentru
+a reprezenta informatiile ce trebuie stocate in baza de date.
+Baza de date va fi un dictionar in care cheia va fi id-ul task-ului iar valoarea va fi o
+instanta a clasei Task.
+Mai multe informatii gasiti in fisierul task.py.
 
 Va trebui sa implementati urmatoarele cereri:
 
@@ -101,6 +105,9 @@ Response:
     "Status": "Up"
 }
 ```
+
+Scopul acestei cereri este de a verifica ca serverul functioneaza, si este deja
+implementata de noi.
 
 ## 2. Add Task
 Url: http://127.0.0.1:5000/add
@@ -125,6 +132,10 @@ Response:
 }
 ```
 
+Clientul trimite un json cu date despre un task.
+Serverul primeste cererea, tranforma datele din body intr-o instanta a clasei
+task si apoi o mapeaza in database la cheia id.
+
 ## 3. Print Tasks
 
 Url: http://127.0.0.1:5000/print
@@ -140,6 +151,8 @@ Body:
 ```
 Response: Json containing all tasks stored in the database
 ```
+
+Clientul va afisa in terminal raspunsul de la server.
 
 ## 3.1. Print Employee Tasks
 
@@ -157,6 +170,8 @@ Body:
 Response: Json containing all tasks of the employee with the name: "name" stored in the database
 ```
 
+Clientul va afisa in terminal raspunsul de la server.
+
 ## 3.2. Print Pending Tasks
 
 Url: http://127.0.0.1:5000/print/pending
@@ -173,6 +188,8 @@ Body:
 Response: Json containing all tasks with status not done.
 ```
 
+Clientul va afisa in terminal raspunsul de la server.
+
 ## 3.3. Print Completed Tasks
 
 Url: http://127.0.0.1:5000/print/completed
@@ -188,6 +205,8 @@ Body:
 ```
 Response: Json containing all tasks with status completed.
 ```
+
+Clientul va afisa in terminal raspunsul de la server.
 
 ## 4. Delete Task
 
@@ -292,7 +311,7 @@ Response:
 }
 ```
 
-Serverul va salva.
+Serverul va salva baza de date intr-un fisier de tip json.
 
 ## 7. Load
 
