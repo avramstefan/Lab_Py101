@@ -1,13 +1,10 @@
-from unittest import result
-
-
 def task1a(nums):
     '''
     nums -> vector int
     return -> vector int
 
-    Dublati elementele din vector si salvati-le
-    doar pe cele divizibile cu 3 folosind functionale
+    Dublati elementele care se divid cu 6, iar pe cele 
+    care nu se divid, triplati-le folosind functionale
     '''
 
     result = []

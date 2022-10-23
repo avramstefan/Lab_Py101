@@ -38,6 +38,7 @@ madam php
 
 > Indicatii de rezolvare:
 * folositi-va de functii lambda (cu if else sau fara) sau construiti-va functii aditionale
+* pentru instructiuni if else in expresii lambda puteti consulta site-ul: https://thispointer.com/python-how-to-use-if-else-elif-in-lambda-functions/
 * ajutati-va de un vector/string de vocale pentru Task 1b
 
 > Explicatii pentru valorile de retur din schelet:

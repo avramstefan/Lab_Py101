@@ -22,6 +22,7 @@ output:
 
 > Indicatii de rezolvare:
 * folositi-va de functii lambda sau creati-va o functie aditionala pentru a verifica daca un student are media corespunzatoare
+* pentru instructiuni if else in expresii lambda puteti consulta site-ul: https://thispointer.com/python-how-to-use-if-else-elif-in-lambda-functions/
 
 ## <ins>Rulare | Testare</ins>
 
