@@ -19,15 +19,13 @@ Deschide un terminal si urmeaza pasii:
 ### Creaza un virtual environment
 
 ```
-> mkdir myproject
-> cd myproject
 > py -3 -m venv skel
 ```
 
 ### Activeaza mediul virtual
 
 ```
-> venv\Scripts\activate
+> skel\Scripts\activate
 ```
 
 Configuratia de windows standard are scripturile blocate. Daca comanda asta nu merge inseamna ca trebuie sa-ti activezi
@@ -38,24 +36,22 @@ https://superuser.com/questions/106360/how-to-enable-execution-of-powershell-scr
 ### Install Flask si Request
 
 ```
-> pip install Flask request
+> pip install Flask 
 ```
 
 ## Linux/Mac OS
-Deschide un terminal si urmeaza pasii:
+Deschide un terminal in lab_05 si urmeaza pasii:
 
 ### Creaza un virtual environment
 
 ```
-$ mkdir myproject
-$ cd myproject
-$ python3 -m venv venv
+$ python3 -m venv skel
 ```
 
 ### Activeaza mediul virtual
 
 ```
-$ . venv/bin/activate
+$ . skel/bin/activate
 ```
 
 ### Install Flask
@@ -83,8 +79,8 @@ Un client care va face cereri catre server pentru a interoga/modifica baza de da
 
 Va punem la dispozitie clasa Task de care ne vom folosi in cadrul acestui laborator pentru
 a reprezenta informatiile ce trebuie stocate in baza de date.
-Baza de date va fi un dictionar in care cheia va fi id-ul task-ului iar valoarea va fi o
-instanta a clasei Task.
+Baza de date va fi un dictionar in care cheia va fi id-ul task-ului iar valoarea va fi un
+alt dictionar construit pe baza clasei Task.
 Mai multe informatii gasiti in fisierul task.py.
 
 Va trebui sa implementati urmatoarele cereri:
@@ -134,7 +130,8 @@ Response:
 
 Clientul trimite un json cu date despre un task.
 Serverul primeste cererea, tranforma datele din body intr-o instanta a clasei
-task si apoi o mapeaza in database la cheia id.
+task.
+Si acest exercitiu este deja implementat.
 
 ## 3. Print Tasks
 

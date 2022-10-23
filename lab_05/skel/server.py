@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import jsonify, request
 import json
+from task import Task
 
 app = Flask(__name__)
 database = {}
@@ -19,10 +20,12 @@ def hello_world():
 def addTask():
     # Read the json from the request
     j =  json.loads(request.get_json())
-    # TO DO add task to database
-    
-    
-    # Send response
+    # Create Task instance
+    task = Task(**j)
+    # We are casting task into a dictionary.
+    # We are doing this because we want to store
+    # the database into a json later.
+    database[task.id] = task.__dict__
     response = jsonify({
         "status": "ok"
     })
