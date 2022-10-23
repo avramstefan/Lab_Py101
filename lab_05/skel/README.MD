@@ -38,7 +38,12 @@ https://superuser.com/questions/106360/how-to-enable-execution-of-powershell-scr
 ```
 > pip install Flask 
 ```
+S-ar putea sa ai nevoie si de request.
+In alt terminal ruleaza:
 
+```
+pip install request
+```
 ## Linux/Mac OS
 Deschide un terminal in lab_05 si urmeaza pasii:
 
@@ -51,7 +56,7 @@ $ python3 -m venv skel
 ### Activeaza mediul virtual
 
 ```
-$ . skel/bin/activate
+$ ./skel/bin/activate
 ```
 
 ### Install Flask
@@ -59,7 +64,8 @@ $ . skel/bin/activate
 ```
 $ pip install Flask
 ```
-S-ar putea sa ai nevoie si de request:
+S-ar putea sa ai nevoie si de request.
+In alt terminal ruleaza:
 
 ```
 pip install request
