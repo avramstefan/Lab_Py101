@@ -1,0 +1,7 @@
+z1 = c.Complex(1, 2, 'z1')
+z2 = c.Complex(3, -2, 'z2')
+print(z1)
+print(z2)
+z1.add_complex_numbers(z2)
+z1.multiply_complex_numbers(z2)
+print(z1)

@@ -6,6 +6,12 @@ from task01 import func
 # Task 01
 print('****************  TASK 01 STARTED  *********************')
 
+path = os.getcwd() + "/tests/out"
+try:
+    os.mkdir(path)
+except OSError:
+    print(end = "")
+
 all_files = []
 for index in range(1, 6):
     file_name = "tests/in/test_" + str(index) + ".in"

@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 
 import os
-from task05 import zig_zag
+import sys
+import task01 as c
 
 # Task 01
-print('****************  TASK 05 STARTED  *********************')
+print('****************  TASK 01 STARTED  *********************')
 
 path = os.getcwd() + "/tests/out"
 try:
@@ -18,23 +19,32 @@ for index in range(1, 6):
     all_files.append(file_name)
 
 index = 1
+original_stdout = sys.stdout
 for file in all_files:
 
-    lines = []
+    sys.stdout = open("tests/out/tmp_" + str(index) + ".out", 'w')
+
+    content = ""
     with open(file) as f:
-        lines = f.readlines()
+        content = f.read()
 
-    dim = lines[0].split(' ')
-    rows = int(dim[0])
-    cols = int(dim[1])
+    exec(content)
+    sys.stdout = original_stdout
 
-    zig_zag_matrix = zig_zag(rows, cols)
+    input_content = []
+    tmp_content = []
 
-    write_file = "tests/out/test_" + str(index) + ".out"
-    g = open(write_file, "w")
-    for i in range(rows):
-        g.write(str(zig_zag_matrix[i]) + "\n")
-    g.close()
+    with open(file) as f:
+        input_content = f.readlines()
+    
+    with open("tests/out/tmp_" + str(index) + ".out") as f:
+        tmp_content = f.readlines()
+    
+    with open("tests/out/test_" + str(index) + ".out", 'w') as f:
+        for line in tmp_content:
+                f.write(line)
+    
+    os.remove("tests/out/tmp_" + str(index) + ".out")
 
     index += 1
 
@@ -50,4 +60,4 @@ for test_case in range(1, 6):
     else:
         print("TEST " + str(test_case) + ".............................. FAILED")
 
-print('**************** TASK 05 COMPLETED *********************')
+print('**************** TASK 01 COMPLETED *********************')

@@ -6,6 +6,12 @@ from task02 import func
 # Task 01
 print('****************  TASK 02 STARTED  *********************')
 
+path = os.getcwd() + "/tests/out"
+try:
+    os.mkdir(path)
+except OSError:
+    print(end = "")
+
 lines = []
 with open("tests/in/test.in") as f:
     lines = f.readlines()
