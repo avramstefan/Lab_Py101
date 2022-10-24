@@ -6,7 +6,7 @@ url = "http://127.0.0.1:5000/"
 while True:
     command = input()
     if command == "Sanity check":
-        x = requests.get(f"{url}sanity")
+        x = requests.get(url)
         print(x.status_code)
     elif command == "Add":
         task = Task(input('id='), input('name='), input('description='), "not done")

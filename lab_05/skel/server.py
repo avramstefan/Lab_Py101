@@ -7,8 +7,8 @@ app = Flask(__name__)
 database = {}
 
 #1
-@app.route('/sanity', methods=['GET'])
-def hello_world():
+@app.route('/', methods=['GET'])
+def sanity():
     response = jsonify({
         "status": "ok"
     })
