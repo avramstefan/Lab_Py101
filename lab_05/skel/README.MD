@@ -42,7 +42,7 @@ S-ar putea sa ai nevoie si de request.
 In alt terminal ruleaza:
 
 ```
-> pip install request
+> pip install requests
 ```
 ## Linux/Mac OS
 Deschide un terminal in lab_05 si urmeaza pasii:
@@ -69,7 +69,7 @@ S-ar putea sa ai nevoie si de request.
 In alt terminal ruleaza:
 
 ```
-$ pip install request
+$ pip install requests
 ```
 # Task
 
