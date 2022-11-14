@@ -19,13 +19,13 @@ Deschide un terminal si urmeaza pasii:
 ### Creaza un virtual environment
 
 ```
-> py -3 -m venv skel
+> py -3 -m venv venv
 ```
 
 ### Activeaza mediul virtual
 
 ```
-> skel\Scripts\activate
+> venv\Scripts\activate
 ```
 
 Configuratia de windows standard are scripturile blocate. Daca comanda asta nu merge inseamna ca trebuie sa-ti activezi
@@ -50,13 +50,14 @@ Deschide un terminal in lab_05 si urmeaza pasii:
 ### Creaza un virtual environment
 
 ```
-$ python3 -m venv skel
+$ python3 -m venv venv
 ```
 
 ### Activeaza mediul virtual
 
 ```
-$ ./skel/bin/activate
+$ chmod +x venv/bin/activate
+$ ./venv/bin/activate
 ```
 
 ### Install Flask
@@ -72,7 +73,7 @@ $ pip install request
 ```
 # Task
 
-Foloseste comanda flask --app server run pentru a pornii server-ul.
+Foloseste comanda python3 -m flask --app server run pentru a pornii server-ul.
 Foloseste python3 client.py pentru client.
 
 Vom crea o aplicatie de tipul task manager, pentru o companie care are nevoie sa-si organizeze angajatii.
